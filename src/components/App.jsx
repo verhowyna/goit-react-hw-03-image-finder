@@ -23,7 +23,7 @@ export class App extends Component {
       try {
         this.setState({ isLoading: true });
 
-        const finalQuery = query.split('/').pop();
+        const finalQuery = query.split('/').pop().trim();
 
         if (finalQuery === '') {
           return toast.error('Please enter something for search');
